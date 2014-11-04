@@ -1,8 +1,8 @@
 *.rbc
 capybara-*.html
-.rspec
-/log
+#.rspec
 /tmp
+/log/*.*
 /db/*.sqlite3
 /public/system
 /coverage/
@@ -10,14 +10,16 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+config/database.yml
+
+.idea
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
-config/secrets.yml
+#config/secrets.yml
 
 ## Environment normalisation:
 /.bundle
-/vendor/bundle
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
