@@ -5,3 +5,4 @@
 #asset 'bootstrap'
 asset 'bootstrap-sass-official'
 asset 'angular'
+asset 'angular-google-maps'
