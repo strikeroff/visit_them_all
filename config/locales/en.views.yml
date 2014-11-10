@@ -1,0 +1,12 @@
+en:
+  views:
+    sessions:
+      log_in: "Log in"
+      remember_me: Remember me
+    navigation:
+      profile: "Profile"
+      sign_in: Sign in
+      sign_out: Sign out
+      sign_up: Sign up
+
+

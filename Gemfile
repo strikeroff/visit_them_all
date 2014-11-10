@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise'
+
 
 ############ FRONTEND ############
 gem 'compass-rails'
@@ -34,6 +36,12 @@ gem "bower-rails", "~> 0.9.1"
 
 
 ############ END FRONTEND ############
+
+
+
+#navigation
+gem "simple-navigation"
+gem "simple-navigation-bootstrap"
 
 
 group :development, :test do

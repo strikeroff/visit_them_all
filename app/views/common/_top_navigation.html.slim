@@ -1,41 +1,27 @@
-nav class="navbar navbar-default" role="navigation"
+nav class="navbar navbar-default  navbar-inverse" role="navigation"
   .container-fluid
     .navbar-header
-      /button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-top-navbar-collapse-1"
-      /  span.sr-only
-      /    | Toggle navigation
-      /  span.icon-bar
-      /  span.icon-bar
-      /  span.icon-bar
+      button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-top-navbar-collapse-1"
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
 
-      = link_to "Brand", "javascript:void(0);", class: "navbar-brand"
+      = link_to "Visit'em all",root_path, class: "navbar-brand"
     #bs-top-navbar-collapse-1.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li.active
-          = link_to "Link", "javascript:void(0);"
-        li
-          = link_to "Link", "javascript:void(0);"
-        /li.dropdown
-        /  a href="#" class="dropdown-toggle" data-toggle="dropdown"
-        /    | More
-        /    span.caret
-        /      |
-        /  ul class="dropdown-menu" role="menu"
-        /    li
-        /      a href="#"
-        /        | Action
-        /    li
-        /      a href="#"
-        /        | Another Action
-        /    li
-        /      a href="#"
-        /        | Something else here
-        /    li.divider
-        /    li
-        /      a href="#"
-        /        | Separated link
-      /ul.nav.navbar-nav.navbar-right
-      /  li.active
-      /    = link_to "Link", "javascript:void(0);"
-      /  li
-      /    = link_to "Link", "javascript:void(0);"
+      - if user_signed_in?
+        = render_navigation :expand_all => true, :renderer => :bootstrap
+        /ul.nav.navbar-nav.navbar-right
+        /  li.active
+        /    = link_to "Link", "javascript:void(0);"
+        /  li
+        /    = link_to "profile", "javascript:void(0);"
+        /  li
+        /    = link_to t("views.navigation.sign_up"), destroy_user_session_path,method: :delete
+
+
+
+
+
+

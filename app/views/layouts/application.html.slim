@@ -5,11 +5,19 @@ html lang="#{I18n.locale}"
       | VisitThemAll
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    -if content_for?(:stylesheets)
+      = yield(:stylesheets)
+    -if content_for?(:javascripts)
+      = yield(:javascripts)
     meta name="viewport" content="width=device-width, initial-scale=1"
     = csrf_meta_tags
   body
-
-
-    = render "common/top_navigation"
+    - if content_for?(:top_navigation)
+      = yield(:top_navigation)
+    - else
+      = render "common/top_navigation"
     .container-fluid
-      = yield
+      -if content_for?(:content)
+        = yield(:content)
+      -else
+        = yield
