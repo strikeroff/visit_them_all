@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem "carmen-rails"
+
 
 ############ FRONTEND ############
 gem 'compass-rails'
@@ -29,6 +31,7 @@ gem "less-rails"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 gem "bower-rails", "~> 0.9.1"
+gem 'angular-rails-templates'
 # Use CoffeeScript for .js.coffee assets and views
 # gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

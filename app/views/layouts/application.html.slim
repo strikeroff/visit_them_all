@@ -1,5 +1,5 @@
 doctype html
-html lang="#{I18n.locale}"
+html lang="#{I18n.locale}" ng-app="itineraryBuilder"
   head
     title
       | VisitThemAll
@@ -20,4 +20,6 @@ html lang="#{I18n.locale}"
       -if content_for?(:content)
         = yield(:content)
       -else
-        = yield
+        .row
+          .col-md-12
+            = yield

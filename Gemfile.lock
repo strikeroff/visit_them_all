@@ -27,6 +27,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angular-rails-templates (0.1.3)
+      railties (>= 3.1)
+      sprockets
+      tilt
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     bower-rails (0.9.1)
@@ -41,6 +45,11 @@ GEM
     capistrano-rails (1.1.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    carmen (1.0.1)
+      unicode_utils (~> 1.4.0)
+    carmen-rails (1.0.1)
+      carmen (~> 1.0.0)
+      rails
     chunky_png (1.3.1)
     colorize (0.7.3)
     commonjs (0.2.7)
@@ -180,6 +189,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicode_utils (1.4.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -187,8 +197,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails-templates
   bower-rails (~> 0.9.1)
   capistrano-rails
+  carmen-rails
   compass-rails
   devise
   fabrication

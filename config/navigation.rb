@@ -3,7 +3,8 @@
 SimpleNavigation::Configuration.run do |navigation|
   navigation.items do |primary|
     primary.dom_class = 'nav navbar-nav navbar-right'
-    primary.item :profile, 'Profile', edit_user_registration_path, highlights_on: /\/users\/edit/
+    primary.item :profile, t("views.navigation.itinerary"), itineraries_path, highlights_on: /\/itineraries/
+    primary.item :itineraries, t("views.navigation.profile"), edit_user_registration_path, highlights_on: /\/users\/edit/
     primary.item :sign_out, t("views.navigation.sign_out"), destroy_user_session_path, method: :delete
   end
   # Specify a custom renderer if needed.

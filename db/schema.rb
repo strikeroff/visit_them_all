@@ -11,10 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109101017) do
+ActiveRecord::Schema.define(version: 20141109183402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "itineraries", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "itineraries", ["user_id"], name: "index_itineraries_on_user_id", using: :btree
+
+  create_table "stops", force: true do |t|
+    t.integer  "itinerary_id"
+    t.integer  "order_number"
+    t.string   "name"
+    t.string   "raw_line_1"
+    t.string   "raw_line_2"
+    t.string   "raw_line_3"
+    t.text     "city"
+    t.text     "state"
+    t.text     "zip"
+    t.text     "country"
+    t.float    "lat"
+    t.float    "lng"
+    t.string   "work_week",            array: true
+    t.time     "beginning_of_workday"
+    t.time     "end_of_workday"
+    t.text     "work_hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

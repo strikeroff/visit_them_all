@@ -1,0 +1,8 @@
+table.table
+  -@itineraries.each do |itinerary|
+    tr
+      td
+        = link_to itinerary.id, itinerary_path(itinerary)
+
+=button_to "Create new itinerary", itineraries_path
+

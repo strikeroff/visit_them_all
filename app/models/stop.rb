@@ -1,4 +1,5 @@
-class Stop < ActiveRecord::Base
+class Stop
+
 
 
 end

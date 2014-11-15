@@ -1,0 +1,2 @@
+module Itinerary::StopsHelper
+end
