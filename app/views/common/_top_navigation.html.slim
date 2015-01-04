@@ -1,4 +1,4 @@
-nav class="navbar navbar-default  navbar-inverse" role="navigation"
+nav class="navbar navbar-default" role="navigation"
   .container-fluid
     .navbar-header
       button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-top-navbar-collapse-1"
@@ -8,7 +8,7 @@ nav class="navbar navbar-default  navbar-inverse" role="navigation"
         span.icon-bar
         span.icon-bar
 
-      = link_to "Visit'em all",root_path, class: "navbar-brand"
+      = link_to t("views.project_name"),root_path, class: "navbar-brand"
     #bs-top-navbar-collapse-1.collapse.navbar-collapse
       - if user_signed_in?
         = render_navigation :expand_all => true, :renderer => :bootstrap

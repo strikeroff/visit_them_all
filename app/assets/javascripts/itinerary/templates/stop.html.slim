@@ -1,11 +1,16 @@
-.stops
-  .address
-    p
-      | {{stop.address.street_line_1}}, {{stop.address.city}}
-    p
-      | {{stop.address.state}},  {{stop.address.zip}}
-  .time-description
-    p
-      | {{stop.time.open_hours}}
-    p
-      | {{stop.time.expect_to_spend}}
+.stop
+  span.label.label-primary.float-left.position
+    | {{$index}}
+  .stop-content.float-left
+    .address
+      p
+        | {{stop.address.street_line_1}}, {{stop.address.city}}
+      p
+        | {{stop.address.state}},  {{stop.address.zip}}
+    .time-description
+      p
+        | {{stop.time.open_hours}}
+      p
+        | {{stop.time.expect_to_spend}}
+
+.clear

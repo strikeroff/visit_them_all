@@ -1,25 +1,15 @@
 doctype html
-html lang="#{I18n.locale}" ng-app="itineraryBuilder"
+html lang="#{I18n.locale}" ng-app="#{@ng_app}"
   head
     title
       | VisitThemAll
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    -if content_for?(:stylesheets)
-      = yield(:stylesheets)
-    -if content_for?(:javascripts)
-      = yield(:javascripts)
     meta name="viewport" content="width=device-width, initial-scale=1"
     = csrf_meta_tags
   body
-    - if content_for?(:top_navigation)
-      = yield(:top_navigation)
-    - else
-      = render "common/top_navigation"
+
+
+    = render "common/top_navigation"
     .container-fluid
-      -if content_for?(:content)
-        = yield(:content)
-      -else
-        .row
-          .col-md-12
-            = yield
+      = yield

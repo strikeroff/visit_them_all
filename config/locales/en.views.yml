@@ -1,5 +1,6 @@
 en:
   views:
+    project_name: "Visit'em all"
     sessions:
       log_in: "Log in"
       remember_me: Remember me

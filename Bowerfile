@@ -5,5 +5,4 @@
 #asset 'bootstrap'
 asset 'bootstrap-sass-official'
 asset 'angular'
-asset 'ngmap'
-#asset 'angular-google-maps'
+asset 'angular-google-maps'

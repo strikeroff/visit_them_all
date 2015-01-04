@@ -1,4 +1,5 @@
-class Stop
+class Stop < ActiveRecord::Base
+  belongs_to :itinerary
 
 
 

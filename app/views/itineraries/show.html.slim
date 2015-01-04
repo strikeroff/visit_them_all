@@ -1,17 +1,1 @@
-.itinerary-container ng-controller="ItineraryBuilderController"
-  .row
-    .col-md-3
-
-      ul.list-group
-        li.list-group-item ng-repeat="stop in stops" ng-include="'itinerary/templates/stop.html'"
-
-    .col-md-9
-      map.angular-google-map-container [center="0,0"
-          zoom="6" ]
-        traffic-layer
-
-
-= javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.17&libraries=weather,geometry,visualization&language=en&sensor=false"
-= javascript_include_tag "http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js"
-
-= javascript_include_tag "itinerary/itinerary_builder"
+= render "workbench", stops: @itinerary.stops.to_json
